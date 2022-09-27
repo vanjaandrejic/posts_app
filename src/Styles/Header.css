@@ -1,15 +1,15 @@
 .header {
-  font-family: "Montserrat";
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
   background-color: #184979;
-}
-
-.header-title {
-  padding: 8%;
-  height: 400px;
+  height: 38vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .header-title h1 {
   font-size: 70px;
+  font-weight: 400;
   color: #FFFFFF;
+  padding-left: 13.23vw;
 }/*# sourceMappingURL=Header.css.map */

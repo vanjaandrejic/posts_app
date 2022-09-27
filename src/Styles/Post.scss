@@ -1,0 +1,36 @@
+@import "./Variables/Variables.scss";
+
+.post {
+  height: 32vh;
+  padding: 2% 4%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 43px $shadowWhite;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  //border: 1px solid black;
+}
+
+.post-title {
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: $darkText;
+  font-size: 18px;
+  max-width: 88.44%;
+  padding-bottom: 2.5%;
+}
+
+.post-body {
+  font-family: "Segoe UI";
+  font-size: 16px;
+  color: $grayText;
+}
+
+.post a {
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: $darkText;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}

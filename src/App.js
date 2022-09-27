@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 import Header from "./Components/Header";
+import Posts from "./Components/Posts";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <>
-      <Header posts={posts}/>
+      <Header posts={posts} />
+      <Posts posts={posts} />
     </>
   );
 }
