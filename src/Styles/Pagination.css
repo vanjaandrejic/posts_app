@@ -1,0 +1,25 @@
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3%;
+  margin-left: 38%;
+  margin-right: 38%;
+  margin-bottom: 7%;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  color: #6c6c78;
+}
+
+.page-num {
+  cursor: pointer;
+}
+
+.page-num:hover {
+  border-bottom: 4px solid #1298D2;
+}
+
+.active {
+  border-bottom: 4px solid #1298D2;
+}/*# sourceMappingURL=Pagination.css.map */
