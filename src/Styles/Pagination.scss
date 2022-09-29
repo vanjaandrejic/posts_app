@@ -1,27 +1,27 @@
 @import "./Variables/Variables.scss";
 
 .pagination {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 3%;
-    margin-left: 38%;
-    margin-right: 38%;
-    margin-bottom: 7%;
-    font-family: "Segoe UI";
-    font-size: 16px;
-    color: $grayText;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3%;
+  margin-left: 38%;
+  margin-right: 38%;
+  margin-bottom: 7%;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  color: $grayText;
 }
 
 .page-num {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.page-num:hover{
-    border-bottom: 4px solid $lightBlue;
+.page-num:hover {
+  border-bottom: 4px solid $lightBlue;
 }
 
 .active {
-    border-bottom: 4px solid $lightBlue;
+  border-bottom: 4px solid $lightBlue;
 }

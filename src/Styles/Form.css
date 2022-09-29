@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin-top: 5%;
+  background-color: #F7F7F8;
+}
+
+.filter-title, .filter-author {
+  width: 48%;
+  height: 40px;
+  margin: 1.5%;
+  border: none;
+  outline: none;
+  color: #B4B7D4;
+  border-radius: 5px;
+  background-color: #EFEFF2;
+  padding: 1%;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.filter-title::-moz-placeholder {
+  color: #B4B7D4;
+}
+
+.filter-title:-ms-input-placeholder {
+  color: #B4B7D4;
+}
+
+.filter-title::placeholder {
+  color: #B4B7D4;
+}/*# sourceMappingURL=Form.css.map */
