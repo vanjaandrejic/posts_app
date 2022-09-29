@@ -6,6 +6,10 @@ export default function Form(props) {
     props.searchTitle(e.target.value);
   };
 
+  const selectHandler = (e) => {
+    props.searchAuthor(e.target.value);
+  };
+
   return (
     <form className="form">
       <input
@@ -15,8 +19,8 @@ export default function Form(props) {
         onChange={inputHandler}
       ></input>
 
-      <select className="filter-author">
-        <option value={0}>Filter by author name</option>
+      <select onChange={selectHandler} className="filter-author">
+        <option>Filter by author name</option>
         <option value={1}>1</option>
         <option value={2}>2</option>
         <option value={3}>3</option>

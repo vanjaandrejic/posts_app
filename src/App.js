@@ -24,10 +24,25 @@ function App() {
     setPosts(filteredPosts);
   };
 
+  const onSearchAuthor = (param) => {
+    if (parseInt(param) !== 0) {
+      const filteredPosts = AllPosts.filter(
+        (post) => post.userId === parseInt(param)
+      );
+      setPosts(filteredPosts);
+    } else {
+      setPosts(AllPosts);
+    }
+  };
+
   return (
     <>
       <Header posts={posts} />
-      <Posts onSearchTitle={onSearchTitle} posts={posts} />
+      <Posts
+        onSearchTitle={onSearchTitle}
+        onSearchAuthor={onSearchAuthor}
+        posts={posts}
+      />
     </>
   );
 }

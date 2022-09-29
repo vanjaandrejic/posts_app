@@ -13,7 +13,7 @@ export default function PostsList(props) {
 
   useEffect(() => {
     const endOffset = postOffset + postsPerPage;
-    const slicedPosts = props.posts.slice(postOffset, endOffset)
+    const slicedPosts = props.posts.slice(postOffset, endOffset);
     setCurrentPosts(slicedPosts);
     setPageCount(Math.ceil(props.posts.length / postsPerPage));
   }, [postOffset, postsPerPage, props.posts]);
@@ -27,7 +27,12 @@ export default function PostsList(props) {
     <>
       <div className="posts-list">
         {currentPosts.map((post) => (
-          <Post key={post.id} title={post.title} body={post.body} userId={post.userId} />
+          <Post
+            key={post.id}
+            title={post.title}
+            body={post.body}
+            userId={post.userId}
+          />
         ))}
       </div>
       <ReactPaginate

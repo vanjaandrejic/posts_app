@@ -8,9 +8,13 @@ export default function Posts(props) {
     props.onSearchTitle(param);
   };
 
+  const searchAuthor = (param) => {
+    props.onSearchAuthor(param);
+  };
+
   return (
     <div className="posts-container">
-      <Form searchTitle={searchTitle} />
+      <Form searchTitle={searchTitle} searchAuthor={searchAuthor} />
       <PostsList posts={props.posts} />
     </div>
   );
