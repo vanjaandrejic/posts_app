@@ -1,8 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Components/Header";
 import Posts from "./Components/Posts";
+import PostDetails from "./Components/PostDetails";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -37,12 +39,21 @@ function App() {
 
   return (
     <>
-      <Header posts={posts} />
-      <Posts
-        onSearchTitle={onSearchTitle}
-        onSearchAuthor={onSearchAuthor}
-        posts={posts}
-      />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Header posts={posts} />
+            <Posts
+              onSearchTitle={onSearchTitle}
+              onSearchAuthor={onSearchAuthor}
+              posts={posts}
+            />
+          </Route>
+          <Route path='/posts/:id'>
+            <PostDetails posts={posts}/>
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }

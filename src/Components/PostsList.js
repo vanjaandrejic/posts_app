@@ -32,6 +32,7 @@ export default function PostsList(props) {
             title={post.title}
             body={post.body}
             userId={post.userId}
+            id={post.id}
           />
         ))}
       </div>
