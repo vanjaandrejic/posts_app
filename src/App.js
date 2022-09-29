@@ -9,6 +9,8 @@ import PostDetails from "./Components/PostDetails";
 function App() {
   const [posts, setPosts] = useState([]);
   const [AllPosts, setAllPosts] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -17,8 +19,26 @@ function App() {
       setPosts(data);
       setAllPosts(data);
     };
+
+    const fetchUsers = async () => {
+      let res = await fetch("https://jsonplaceholder.typicode.com/users");
+      let data = await res.json();
+      setUsers(data);
+    };
+
+    const fetchComments = async () => {
+      let res = await fetch("https://jsonplaceholder.typicode.com/comments");
+      let data = await res.json();
+      setComments(data);
+    };
+
     fetchPosts();
+    fetchUsers();
+    fetchComments();
   }, []);
+
+  console.log(users);
+  console.log(comments);
 
   const onSearchTitle = (param) => {
     console.log(param);
@@ -50,7 +70,7 @@ function App() {
             />
           </Route>
           <Route path='/posts/:id'>
-            <PostDetails posts={posts}/>
+            <PostDetails posts={posts} users={users} comments={comments}/>
           </Route>
         </Switch>
       </Router>
