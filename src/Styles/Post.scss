@@ -1,7 +1,8 @@
 @import "./Variables/Variables.scss";
 
 .post {
-  height: 32vh;
+  min-height: 32vh;
+  max-height: 52vh;
   padding: 2% 4%;
   border-radius: 10px;
   box-shadow: 2px 3px 43px $shadowWhite;

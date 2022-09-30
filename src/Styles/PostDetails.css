@@ -1,0 +1,101 @@
+.post-container {
+  margin: auto;
+  width: 61.87vw;
+  margin-top: 5.5%;
+}
+
+.post-details-title h1 {
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-weight: 400;
+  margin-bottom: 2.75%;
+  padding: 0 0 0 20%;
+  color: #2c2c37;
+}
+
+.post-details-body {
+  border-top: 1px solid #F7F7F8;
+}
+
+.post-details-body p {
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3% 18% 0 18%;
+}
+
+.post-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1% 18% 0 18%;
+  border-top: 1px solid #F7F7F8;
+  margin-top: 2.75%;
+  margin-bottom: 2.75%;
+}
+
+.post-author {
+  margin: 0 18%;
+  background-color: #F7F7F8;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.6% 7.8%;
+}
+
+.post-author h4, .comment-card p {
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 400;
+  color: #6c6c78;
+}
+
+.post-author h3 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.post-comments {
+  margin: 5.5% 18%;
+}
+
+.post-comments h2 {
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.comment-card {
+  background-color: #F7F7F8;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.6% 7.8%;
+  margin: 2.8% 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-card h3 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 1.3%;
+}
+
+.post-controls__prev {
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #6c6c78;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.post-controls__next {
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #2c2c37;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}/*# sourceMappingURL=PostDetails.css.map */

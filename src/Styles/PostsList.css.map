@@ -1,1 +1,1 @@
-{"version":3,"sources":["PostsList.scss","PostsList.css"],"names":[],"mappings":"AAAA;EACE,cAAA;EACA,aAAA;EAEA,uCAAA;EACA,kCAAA;EACA,mBAAA;EACA,sBAAA;ACAF;ADEE;EACE,iBAAA;EACA,oBAAA;EAEA,eAAA;EACA,kBAAA;ACDJ","file":"PostsList.css"}
+{"version":3,"sources":["PostsList.scss","PostsList.css"],"names":[],"mappings":"AAAA;EACE,cAAA;EACA,aAAA;EAEA,uCAAA;EACA,kCAAA;EACA,mBAAA;EACA,sBAAA;ACAF;ADEE;EACE,iBAAA;EACA,oBAAA;EAEA,eAAA;EACA,kBAAA;ACDJ;ADIE;EACE,eAAA;ACFJ","file":"PostsList.css"}

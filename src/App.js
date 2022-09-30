@@ -61,7 +61,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/posts">
             <Header posts={posts} />
             <Posts
               onSearchTitle={onSearchTitle}

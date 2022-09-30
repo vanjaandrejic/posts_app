@@ -11,4 +11,7 @@
   grid-column-start: 1;
   grid-row-end: 2;
   grid-column-end: 3;
+}
+.posts-list > :first-child h1 {
+  font-size: 30px;
 }/*# sourceMappingURL=PostsList.css.map */
