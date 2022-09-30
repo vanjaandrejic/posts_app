@@ -14,7 +14,11 @@ export default function Posts(props) {
 
   return (
     <div className="posts-container">
-      <Form searchTitle={searchTitle} searchAuthor={searchAuthor} />
+      <Form
+        users={props.users}
+        searchTitle={searchTitle}
+        searchAuthor={searchAuthor}
+      />
       <PostsList posts={props.posts} />
     </div>
   );

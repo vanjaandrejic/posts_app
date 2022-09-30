@@ -1,6 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 import Header from "./Components/Header";
 import Posts from "./Components/Posts";
@@ -37,11 +42,7 @@ function App() {
     fetchComments();
   }, []);
 
-  console.log(users);
-  console.log(comments);
-
   const onSearchTitle = (param) => {
-    console.log(param);
     const filteredPosts = AllPosts.filter((post) => post.title.includes(param));
     setPosts(filteredPosts);
   };
@@ -61,16 +62,20 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/posts">
+          <Route path="/" exact>
+            <Redirect to="/posts" />
+          </Route>
+          <Route path="/posts" exact>
             <Header posts={posts} />
             <Posts
               onSearchTitle={onSearchTitle}
               onSearchAuthor={onSearchAuthor}
               posts={posts}
+              users={users}
             />
           </Route>
-          <Route path='/posts/:id'>
-            <PostDetails posts={posts} users={users} comments={comments}/>
+          <Route path="/posts/:id">
+            <PostDetails posts={posts} users={users} comments={comments} />
           </Route>
         </Switch>
       </Router>

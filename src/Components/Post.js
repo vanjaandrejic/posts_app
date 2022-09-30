@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/Post.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Post(props) {
   return (

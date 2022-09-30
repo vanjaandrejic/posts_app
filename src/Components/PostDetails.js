@@ -17,16 +17,9 @@ export default function PostDetails(props) {
 
   const user = props.users.find((user) => user.id === userId);
 
-
-
-
-  console.log(user.address.street);
-
   const commentList = props.comments.filter(
     (comment) => comment.postId === postId
   );
-
-  console.log(commentList);
 
   const postComments = commentList.map((c) => {
     return (
@@ -46,8 +39,12 @@ export default function PostDetails(props) {
         <p>{post.body}</p>
       </div>
       <div className="post-controls">
-        <Link className="post-controls__prev" to={`/posts/${prevId}`}><FontAwesomeIcon icon={faArrowLeft} size="xs" /> Previous Article</Link>
-        <Link className="post-controls__next" to={`/posts/${nextId}`}>Next Article <FontAwesomeIcon icon={faArrowRight} size="xs" /></Link>
+        <Link className="post-controls__prev" to={`/posts/${prevId}`}>
+          <FontAwesomeIcon icon={faArrowLeft} size="xs" /> Previous Article
+        </Link>
+        <Link className="post-controls__next" to={`/posts/${nextId}`}>
+          Next Article <FontAwesomeIcon icon={faArrowRight} size="xs" />
+        </Link>
       </div>
       <div className="post-author">
         <div className="post-author__author">
@@ -55,8 +52,10 @@ export default function PostDetails(props) {
           <h3>{user.name}</h3>
         </div>
         <div className="post-author__address">
-        <h4>Address</h4>
-          <h3>{user.address.city}, {user.address.zipcode}, {user.address.street}</h3>
+          <h4>Address</h4>
+          <h3>
+            {user.address.city}, {user.address.zipcode}, {user.address.street}
+          </h3>
         </div>
       </div>
       <div className="post-comments">
