@@ -12,17 +12,47 @@ import Posts from "./Components/Posts";
 import PostDetails from "./Components/PostDetails";
 
 function App() {
+  const [allPosts, setAllPosts] = useState([]);
   const [posts, setPosts] = useState([]);
-  const [AllPosts, setAllPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const [comments, setComments] = useState([]);
+  const [titleSearchParam, setTitleSearchParam] = useState("");
+  const [authorSearchParam, setAuthorSearchParam] = useState("");
+
+  useEffect(() => {
+    if (titleSearchParam && authorSearchParam > 0) {
+      const filteredPosts = allPosts.filter(
+        (post) =>
+          post.title.includes(titleSearchParam.toLowerCase()) &&
+          post.userId === parseInt(authorSearchParam)
+      );
+      setPosts(filteredPosts);
+    } else if (titleSearchParam && !authorSearchParam) {
+      const filteredPosts = allPosts.filter((post) =>
+        post.title.includes(titleSearchParam.toLowerCase())
+      );
+      setPosts(filteredPosts);
+    } else if (authorSearchParam > 0 && !titleSearchParam) {
+      const filteredPosts = allPosts.filter(
+        (post) => post.userId === parseInt(authorSearchParam)
+      );
+      setPosts(filteredPosts);
+    } else if (!titleSearchParam && authorSearchParam === 0) {
+      setPosts(allPosts);
+    } else {
+      const filteredPosts = allPosts.filter((post) =>
+        post.title.includes(titleSearchParam.toLowerCase())
+      );
+      setPosts(filteredPosts);
+    }
+  }, [titleSearchParam, authorSearchParam, allPosts]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       let res = await fetch("https://jsonplaceholder.typicode.com/posts");
       let data = await res.json();
-      setPosts(data);
       setAllPosts(data);
+      setPosts(data);
     };
 
     const fetchUsers = async () => {
@@ -43,19 +73,11 @@ function App() {
   }, []);
 
   const onSearchTitle = (param) => {
-    const filteredPosts = AllPosts.filter((post) => post.title.includes(param));
-    setPosts(filteredPosts);
+    setTitleSearchParam(param);
   };
 
   const onSearchAuthor = (param) => {
-    if (parseInt(param) !== 0) {
-      const filteredPosts = AllPosts.filter(
-        (post) => post.userId === parseInt(param)
-      );
-      setPosts(filteredPosts);
-    } else {
-      setPosts(AllPosts);
-    }
+    setAuthorSearchParam(param);
   };
 
   return (
