@@ -23,6 +23,8 @@ export default function PostsList(props) {
     setPostOffset(newOffset);
   };
 
+  window.scrollTo(0, 0);
+
   return (
     <>
       <div className="posts-list">

@@ -8,8 +8,7 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 export default function PostDetails(props) {
   const params = useParams();
   const postId = parseInt(params.id);
-  const prevId = postId - 1;
-  const nextId = postId + 1;
+  const numPosts = props.posts.length;
 
   const post = props.posts.find((post) => post.id === postId);
 
@@ -17,9 +16,21 @@ export default function PostDetails(props) {
 
   const user = props.users.find((user) => user.id === userId);
 
+  let prevId = postId - 1;
+  let nextId = postId + 1;
+
+  if (postId === 1) {
+    prevId = 1;
+  }
+  if (postId === numPosts) {
+    nextId = numPosts;
+  }
+
   const commentList = props.comments.filter(
     (comment) => comment.postId === postId
   );
+
+  window.scrollTo(0, 0);
 
   const postComments = commentList.map((c) => {
     return (
